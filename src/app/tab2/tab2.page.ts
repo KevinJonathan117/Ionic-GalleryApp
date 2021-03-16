@@ -7,8 +7,18 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  img : string = "placeholder.png";
+  img: string = "placeholder.png";
+  randomNumber: number = Math.floor(Math.random() * 10);
+  inputValue: number = 0;
+  guessStatus: boolean = false;
 
-  constructor() {}
+  constructor() { }
+
+  checkResult() {
+    if(this.inputValue == this.randomNumber) {
+      this.guessStatus = true;
+      this.img = "My_Photo.png";
+    }
+  }
 
 }
