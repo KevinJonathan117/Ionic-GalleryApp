@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cloud Photo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="ion-text-center">
+    <ion-card-header>
+      <ion-card-title>Upload Photo</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button color='danger' shape="round" size="medium" (click)="deletePhoto()">Delete</ion-button>
+      <ion-button color='primary' shape="round" size="medium" (click)="uploadPhoto()">Upload</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3" *ngFor="let iPhoto of urlImageStorage; index as position">
+        <ion-img [src]="iPhoto"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
